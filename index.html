@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>clock app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100i,700" rel="stylesheet">
+</head>
+<body>
+
+	<div class="Analogcontainer jumbotron">
+		<div class="clock">
+			<img id="hourHand" class='Hand' src="hourHand.png">
+			<img id="minuteHand" class='Hand' src="minuteHand.png">
+			<img id="secondHand" class='Hand' src="secondHand.png">
+		</div>
+	</div>
+
+	<audio id="sound">
+		<source src="sound.mp3" type="audio/mpeg">
+	</audio>
+	<div class="Alarmcontainer jumbotron">
+		<div class="setAlarm">
+			<input type="datetime-local" id="alarmTime" class="left" >
+			<button type="button" class="btn btn-dark right" id="alarmButton" class="">SET ALARM</button>
+		</div>
+		<div id="alarmOptions">
+			<button id="Snooze" class="btn btn-primary left">Snooze 5 minutes</button>
+			<button id="stop" class="btn btn-success right">STOP!</button>
+		</div>
+	</div>
+
+		<div class="containerHex">
+		<h1 id="Hextime"></h1>
+		<p id="Hexcolor"></p>		
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
