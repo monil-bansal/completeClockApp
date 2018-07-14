@@ -36,12 +36,12 @@ const setAlarm = () => {
 	let alarm = new Date(ms);
 	let alarmTime=new Date(alarm.getUTCFullYear(),
 		alarm.getUTCMonth(),alarm.getUTCDate(),
-		alarm.getHours(),alarm.getMinutes(),
-		alarm.getSeconds()
+		alarm.getUTCHours(),alarm.getUTCMinutes(),
+		alarm.getUTCSeconds()
 	);
-	let diffInMS = alarmTime.getTime() - (new Date()).getTime();
-	console.log(diffInMS);
-	let diffTime=diffInMS*1000;
+	let cur= new Date();
+	let diffInMS = alarmTime.getTime() - cur.getTime();
+	console.log(Number(diffInMS/1000));
 	if(diffInMS <0){
 		alert("time reached");
 		alarmTimeInput.value='';
