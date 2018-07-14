@@ -49,8 +49,8 @@ const setAlarm = () => {
 		console.log("alarm set!");
 	}
 
-	setTimeout(initAlarm,10000);
-	alarmTimeInput.value='';
+	setTimeout(initAlarm,diffInMS* 10000);
+	// alarmTimeInput.value='';
 	return;
 };
 
