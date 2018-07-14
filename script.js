@@ -40,6 +40,8 @@ const setAlarm = () => {
 		alarm.getSeconds()
 	);
 	let diffInMS = alarmTime.getTime() - (new Date()).getTime();
+	console.log(diffInMS);
+	let diffTime=diffInMS*1000;
 	if(diffInMS <0){
 		alert("time reached");
 		alarmTimeInput.value='';
@@ -47,9 +49,10 @@ const setAlarm = () => {
 	}
 	else{
 		console.log("alarm set!");
+		setTimeout(initAlarm, diffInMS);
 	}
 
-	setTimeout(initAlarm,diffInMS* 10000);
+	
 	// alarmTimeInput.value='';
 
 	return;
